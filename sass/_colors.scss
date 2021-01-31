@@ -1,0 +1,21 @@
+:root{
+  --White: hsl(0, 0%, 100%);
+--Black: hsl(0, 0%, 0%);
+--Dark-Gray: hsl(0, 0%, 55%);
+--Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+$white:var(--White);
+$black:var(--Black);
+$darkgray:var(--Dark-Gray);
+$verydarkgray:var(--Very-Dark-Gray);
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+$font-one: 'Alata';
+$font-two:'Josefin Sans';
+
+body{
+  font-family: $font-one;
+  font-size: 15px;
+  font-weight: 400;
+}
+

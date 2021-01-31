@@ -1,0 +1,63 @@
+.header{
+  height: 300px;
+  width: 100%;
+  background: url('/images/desktop/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-bottom: 10px;
+}
+.menu{
+  color: $white;
+  position: relative;
+  &--ham{
+    position: absolute;
+    top:20px;
+    right: 20px;
+  }
+  &--logo{
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  &--op{
+    position: relative;
+    background: $black;
+    color: $darkgray;
+    height: 300px;
+    transform: translateY(-120%);
+    transition: transform 0.5s;
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2.8em;
+  }
+  &--title{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    width: 80%;
+    padding: 0.8em;
+    border: 2px solid $white;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: -1;
+  }
+  &--item{
+    font-size: 1.4em;
+  }
+  &--close, &--l{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  &--l{
+    left:10px;
+    margin-top: -5px;
+  }
+}
+.show{
+  transform: translateY(-16.5%);
+}
