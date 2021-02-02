@@ -1,0 +1,79 @@
+.footer{
+  background-color: $black;
+  color: $white;
+  @include laptop{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+  }
+  @include laptop{
+    &--menu{
+      grid-column: 1/2;
+      grid-row: 2/-1;
+      place-items: start;
+    }
+  }
+  &--img{
+    @include laptop{
+      margin-left: 28%;
+    }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  }
+  &--op{
+    @include laptop{
+      display: flex;
+      justify-content: center;
+    }
+    height: 100%;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 2em;
+  }
+  @include laptop{
+    &--item{
+      cursor:pointer;
+      margin-left: 15px;
+      &:hover{
+        border-top: 2px solid $white;
+      }
+    }
+  }
+  @include laptop{
+    &--social{
+      grid-column: 2/3;
+    }
+  }
+  &--img2{
+    @include laptop{
+      justify-content: center;
+      & img{
+        margin-right: 15px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &--cite{
+    @include laptop{
+      margin-left: 25%;
+    }
+    margin-bottom: 0;
+    color: $verydarkgray;
+  }
+  &--author{
+    margin-top: 10px;
+    text-align: center;
+    & a{
+      color: lightcoral;
+    }
+  }
+}

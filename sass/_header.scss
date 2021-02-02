@@ -1,39 +1,62 @@
 .header{
+  @include laptop{
+    height: 450px;
+  }
   height: 300px;
   width: 100%;
   background: url('/images/desktop/image-hero.jpg');
   background-repeat: no-repeat;
   background-position: center top;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 .menu{
   color: $white;
   position: relative;
   &--ham{
+    @include laptop{
+      display: none;
+    }
     position: absolute;
     top:20px;
     right: 20px;
   }
   &--logo{
+  @include laptop{
+    margin-left: 25px;
+  }
     margin-top: 15px;
     margin-left: 15px;
   }
   &--op{
+    @include laptop{
+      width: 50%;
+      transform: translateY(0%);
+      background-color: transparent;
+      flex-direction: row;
+      justify-content: space-evenly;
+      transform: translateY(-15%) translateX(100%);
+      color: $white;
+    }
     position: relative;
     background: $black;
     color: $darkgray;
     height: 300px;
     transform: translateY(-120%);
     transition: transform 0.5s;
-    padding-left: 0;
     margin-top: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 2.8em;
+    line-height: 3.5em;
+    z-index: 10;
   }
   &--title{
+    @include laptop{
+      width: 30%;
+      transform: translateY(30%);
+      padding: 1.5em;
+    }
     text-transform: uppercase;
     text-align: center;
     font-weight: 300;
@@ -43,17 +66,28 @@
     position: absolute;
     top: 20%;
     left: 10%;
-    z-index: -1;
+    z-index: 0;
   }
   &--item{
-    font-size: 1.4em;
+    font-size: 1.2em;
+    height: 50px;
+    cursor: pointer;
+    @include laptop{
+      &:hover{
+        border-bottom: 2px solid $white;
+      }
+    }
   }
   &--close, &--l{
+    @include laptop {
+      display: none;
+    }
     position: absolute;
     top: 20px;
     right: 20px;
   }
   &--l{
+    top: 10px;
     left:10px;
     margin-top: -5px;
   }
